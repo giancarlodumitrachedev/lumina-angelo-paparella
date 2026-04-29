@@ -1,61 +1,106 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { SmartLink } from "@/components/smart-link";
+import { Video, Mic, MicOff } from "lucide-react";
 import { getDictionary } from "@/lib/demo-params";
-import { motion } from "framer-motion";
 
 interface HeroSectionProps {
   field: string;
 }
 
 export function HeroSection({ field }: HeroSectionProps) {
-  const content = getDictionary(field);
+  const dict = getDictionary(field);
 
   return (
-    <section className="relative w-full h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden">
-      {/* Background Image Wrapper */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/Assets/hero-bg.webp"
-          alt="Studio di Fisioterapia"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
-        {/* Overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-background/60 md:bg-background/40" />
-      </div>
+    <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-background">
+      {/* Decorative background hexagon/lines from dribbble */}
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
 
-      <div className="container relative z-10 max-w-5xl mx-auto px-6 flex flex-col items-center md:items-start text-center md:text-left">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="max-w-3xl"
-        >
-          <h1 className="font-heading text-5xl md:text-7xl font-semibold text-foreground leading-[1.1] tracking-tight mb-8">
-            {content.heroTitle}
-          </h1>
-          <p className="text-lg md:text-2xl text-foreground/90 font-medium mb-10 max-w-2xl leading-relaxed">
-            {content.heroSubtitle}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 items-center md:items-start">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+          
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col items-start text-left"
+          >
+            <span className="inline-block py-1.5 px-4 rounded-full bg-secondary text-primary text-sm font-semibold mb-6 tracking-wide uppercase border border-primary/10">
+              Professional {field} Services
+            </span>
+            <h1 className="text-foreground font-heading text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-6">
+              Assisting Your Physical Health With Our Best Services
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 max-w-lg">
+              {dict.heroSubtitle}
+            </p>
             <SmartLink
               href="/contatti"
-              className="bg-primary text-primary-foreground px-8 py-4 rounded-md text-lg font-medium transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 hover:bg-primary/95"
+              className="inline-block bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-xl text-lg font-medium transition-all shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5"
             >
-              Prenota un consulto
+              Start Consultation
             </SmartLink>
-            <SmartLink
-              href="/chi-sono"
-              className="px-8 py-4 rounded-md text-lg font-medium text-foreground hover:text-primary transition-colors hover:bg-secondary/50 backdrop-blur-sm"
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="relative lg:ml-auto w-full max-w-lg"
+          >
+            {/* Main Image */}
+            <div className="relative aspect-[4/5] md:aspect-square w-full rounded-[2rem] overflow-hidden shadow-2xl">
+              <Image
+                src="/Assets/hero-bg.webp"
+                alt="Therapy Session"
+                fill
+                className="object-cover"
+                priority
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+
+            {/* Floating Video Call Card */}
+            <motion.div 
+              initial={{ opacity: 0, x: -50, y: 50 }}
+              animate={{ opacity: 1, x: 0, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="absolute -bottom-10 -left-10 md:-left-20 bg-card p-4 rounded-2xl shadow-xl border border-border/50 flex flex-col gap-3 w-64 z-20"
             >
-              Scopri di più
-            </SmartLink>
-          </div>
-        </motion.div>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full overflow-hidden relative bg-muted shrink-0">
+                  <Image src="/Assets/psychologist-portrait-m.webp" alt="Doctor" fill className="object-cover" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold">Online Session</p>
+                  <p className="text-xs text-muted-foreground">00:15:32</p>
+                </div>
+              </div>
+              <div className="flex gap-2 w-full mt-1">
+                <div className="h-8 flex-1 bg-secondary rounded-lg flex items-center justify-center text-primary">
+                  <Video className="w-4 h-4" />
+                </div>
+                <div className="h-8 flex-1 bg-destructive/10 rounded-lg flex items-center justify-center text-destructive">
+                  <MicOff className="w-4 h-4" />
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Floating Patient Name Tag */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="absolute top-10 -right-6 md:-right-12 bg-card px-5 py-3 rounded-xl shadow-lg border border-border/50 flex items-center gap-3 z-20"
+            >
+              <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+              <span className="text-sm font-medium">Active Patient</span>
+            </motion.div>
+
+          </motion.div>
+        </div>
       </div>
     </section>
   );

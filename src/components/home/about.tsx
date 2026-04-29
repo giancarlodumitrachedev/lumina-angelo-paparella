@@ -12,9 +12,7 @@ interface AboutSectionProps {
 }
 
 export function AboutSection({ name, fieldDisplay, isFemale, prefix }: AboutSectionProps) {
-  const imageUrl = isFemale 
-    ? "/Assets/psychologist-portrait-f.webp"
-    : "/Assets/psychologist-portrait-m.webp";
+  const imageUrl = "/Assets/fisioterapista-portrait.webp";
 
   const lastName = name.split(" ").filter(n => !n.toLowerCase().includes("dott")).join(" ").trim();
 
@@ -33,7 +31,7 @@ export function AboutSection({ name, fieldDisplay, isFemale, prefix }: AboutSect
           >
             <Image
               src={imageUrl}
-              alt={`Ritratto di ${name}`}
+              alt={`Ritratto Fisioterapista ${name}`}
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -57,14 +55,14 @@ export function AboutSection({ name, fieldDisplay, isFemale, prefix }: AboutSect
             
             <div className="space-y-6 text-lg text-foreground/80 leading-relaxed mb-10">
               <p>
-                {isFemale ? "Benvenuta/o" : "Benvenuto"}, sono {prefix} {lastName}. Il mio approccio alla Fisioterapia si basa sull'ascolto profondo, 
-                sull'empatia e sulla costruzione di un'alleanza terapeutica solida per affrontare insieme 
-                le sfide della vita.
+                {isFemale ? "Benvenuta/o" : "Benvenuto"}, sono {prefix} {lastName}. Il mio approccio alla Fisioterapia si basa sull'ascolto della persona prima ancora che del paziente, 
+                sull'empatia e sulla costruzione di un percorso solido per affrontare insieme 
+                il recupero fisico e funzionale.
               </p>
               <p>
-                Credo fermamente che ogni persona abbia le risorse interne per superare i momenti di stallo. 
-                Il percorso psicologico è lo spazio protetto dove poter far emergere, riconoscere e valorizzare 
-                queste potenzialità.
+                Credo fermamente che attraverso le giuste tecniche manuali e strumentali, ogni persona possa superare i dolori articolari e muscolari. 
+                La sala riabilitativa è lo spazio protetto dove poter recuperare, riconoscere i propri limiti e superarli 
+                verso il pieno benessere.
               </p>
             </div>
 
