@@ -2,7 +2,7 @@ import { ContactForm } from "@/components/contact-form";
 import { getDemoParams } from "@/lib/demo-params";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
-export const metadata = { title: "Contatti | Lumina Psicologo" };
+export const metadata = { title: "Contatti | Lumina Fisioterapista" };
 
 export default async function ContattiPage({
   searchParams,

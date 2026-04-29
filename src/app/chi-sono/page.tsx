@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { getDemoParams } from "@/lib/demo-params";
 import { SmartLink } from "@/components/smart-link";
+import { getDemoParams } from "@/lib/demo-params";
 
-export const metadata = { title: "Chi Sono | Lumina Psicologo" };
+export const metadata = { title: "Chi Sono | Lumina Fisioterapista" };
 
 export default async function ChiSonoPage({
   searchParams,
@@ -37,25 +37,24 @@ export default async function ChiSonoPage({
               {params.name} <span className="text-foreground/50 font-normal">| {params.fieldDisplay}</span>
             </h2>
             <p className="mb-4">
-              La mia passione per la psicologia nasce dal desiderio profondo di comprendere l'essere umano in tutte le sue sfaccettature. 
-              Nel corso della mia carriera, ho affinato un approccio terapeutico che integra competenze cliniche rigorose con una reale 
-              ed empatica presenza relazionale.
+              Ho effettuato il mio percorso di laurea tra tirocinio e università in Puglia, dove successivamente ho lavorato e ho fatto un&apos;importante esperienza sul campo.
             </p>
             <p className="mb-4">
-              Mi sono specializzato attraverso anni di studio e pratica clinica, sviluppando una solida esperienza nel trattamento 
-              delle {params.fieldDisplay.toLowerCase()} e delle difficoltà emotive in generale. Il mio obiettivo principale è fornire uno spazio sicuro dove 
-              i pazienti possano esplorare se stessi senza il timore di essere giudicati.
+              Attualmente esercito nella città di Torino. Ogni giorno coltivo la passione profonda per questo lavoro, guidato da sempre dal mio forte interesse per la cura del corpo umano e la sua anatomia.
             </p>
-            <p className="mb-8">
-              Lavorando insieme, cercheremo non solo di alleviare il sintomo o il disagio immediato, ma di rintracciare le radici 
-              profonde delle dinamiche interiori, promuovendo un cambiamento autentico e duraturo.
+            <p className="mb-8 font-medium">
+              Mi piace creare con i miei pazienti un rapporto empatico, entrare in connessione e imparare ad ascoltarli veramente al fine di poter essere un supporto concreto per la riconquista di un nuovo equilibrio.
             </p>
+
+            <div className="p-6 bg-secondary/5 rounded-xl border border-secondary/10 italic text-primary/80 text-lg mb-8">
+              &quot;Prima ascolto la persona che ho davanti, e solo dopo il paziente.&quot;
+            </div>
             
             <SmartLink
               href="/contatti"
-              className="inline-block bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 rounded-md text-lg font-medium transition-all shadow-md mt-4 no-underline"
+              className="inline-block bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 rounded-md text-lg font-medium transition-all shadow-md no-underline"
             >
-              Prenota un primo colloquio
+              Prenota una prima visita
             </SmartLink>
           </div>
         </div>

@@ -18,7 +18,7 @@ export function HeroSection({ field }: HeroSectionProps) {
       <div className="absolute inset-0 z-0">
         <Image
           src="/Assets/hero-bg.webp"
-          alt="Studio di psicologia"
+          alt="Studio di Fisioterapia"
           fill
           priority
           className="object-cover"

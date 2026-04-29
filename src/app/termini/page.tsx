@@ -1,6 +1,6 @@
 import { getDemoParams } from "@/lib/demo-params";
 
-export const metadata = { title: "Termini di Servizio | Lumina Psicologo" };
+export const metadata = { title: "Termini di Servizio | Lumina Fisioterapista" };
 
 export default async function TerminiPage({
   searchParams,

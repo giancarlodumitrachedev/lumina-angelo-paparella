@@ -1,6 +1,6 @@
 import { getDemoParams } from "@/lib/demo-params";
 
-export const metadata = { title: "Privacy Policy | Lumina Psicologo" };
+export const metadata = { title: "Privacy Policy | Lumina Fisioterapista" };
 
 export default async function PrivacyPage({
   searchParams,

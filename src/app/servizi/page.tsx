@@ -1,7 +1,7 @@
 import { getDemoParams } from "@/lib/demo-params";
 import { SmartLink } from "@/components/smart-link";
 
-export const metadata = { title: "Servizi | Lumina Psicologo" };
+export const metadata = { title: "Servizi | Lumina Fisioterapista" };
 
 export default async function ServiziPage({
   searchParams,

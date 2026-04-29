@@ -16,7 +16,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Lumina | Psicologo",
+  title: "Lumina | Fisioterapista",
   description: "Prototipo per professionisti della salute mentale by Lumina.",
 };
 

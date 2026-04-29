@@ -11,12 +11,11 @@ export interface DemoParams {
 export async function getDemoParams(searchParamsPromise: Promise<{ [key: string]: string | string[] | undefined }> | undefined): Promise<DemoParams> {
   const searchParams = searchParamsPromise ? await searchParamsPromise : {};
   
-  // AL SITO VENDUTO: Se imposti queste variabili su Vercel, il sito ignorerà l'URL
-  // e utilizzerà sempre questi dati finali. Il dominio resterà pulitissimo: www.ilsuosito.it
-  const rawName = process.env.NEXT_PUBLIC_CLIENT_NAME || (searchParams.name as string) || "Dott. Mario Rossi";
-  const rawCity = process.env.NEXT_PUBLIC_CLIENT_CITY || (searchParams.city as string) || "Milano";
-  const rawAddress = process.env.NEXT_PUBLIC_CLIENT_ADDRESS || (searchParams.address as string) || "Via Montenapoleone 1";
-  const rawField = process.env.NEXT_PUBLIC_CLIENT_FIELD || (searchParams.field as string) || "psicologo";
+  // Dati cliente hardcoded direttamente
+  const rawName = "Dott. Angelo Paparella";
+  const rawCity = "Torino";
+  const rawAddress = "Via delle Pervinche 50B, Torino 10151";
+  const rawField = "fisioterapista";
 
   // Rimuovi i trattini dall'URL e rendi la prima lettera maiuscola (es. "terapia-di-coppia" -> "Terapia di coppia")
   const fieldWithoutHyphens = rawField.replace(/-/g, " ");
@@ -41,26 +40,16 @@ export async function getDemoParams(searchParamsPromise: Promise<{ [key: string]
 export function getDictionary(field: string) {
   const f = field.toLowerCase();
   
-  if (f.includes("sessuolog")) {
+  if (f.includes("fisioterap")) {
     return {
-      heroTitle: "Siediti. Parla. Ritrova l'intimità.",
-      heroSubtitle: "Un percorso calmo, sicuro e riservato per esplorare e superare le difficoltà legate alla sfera relazionale e intima."
-    };
-  } else if (f.includes("coppia")) {
-    return {
-      heroTitle: "Siediti. Parlate. Ritrovatevi.",
-      heroSubtitle: "Uno spazio neutrale ed empatico dove ristabilire l'equilibrio della coppia, riscoprendo serenità e comunicazione profonda."
-    };
-  } else if (f.includes("dipendenz")) {
-    return {
-      heroTitle: "Siediti. Parla. Ritrova la tua libertà.",
-      heroSubtitle: "Affronta e supera le dinamiche disfunzionali in un ambiente accogliente e autenticamente non giudicante. Insieme."
+      heroTitle: "Ascolto la persona, curo il corpo.",
+      heroSubtitle: "Un supporto terapeutico concreto e umano per il recupero funzionale e la riconquista del tuo equilibrio fisico."
     };
   }
 
   // Default
   return {
     heroTitle: "Siediti. Parla. Ritrova la serenità.",
-    heroSubtitle: "Un supporto psicologico dedicato e altamente professionale per superare l'impasse e ritrovare il proprio centro."
+    heroSubtitle: "Un supporto dedicato e altamente professionale per superare l'impasse e ritrovare il proprio centro."
   };
 }

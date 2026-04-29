@@ -57,7 +57,7 @@ export function AboutSection({ name, fieldDisplay, isFemale, prefix }: AboutSect
             
             <div className="space-y-6 text-lg text-foreground/80 leading-relaxed mb-10">
               <p>
-                {isFemale ? "Benvenuta/o" : "Benvenuto"}, sono {prefix} {lastName}. Il mio approccio alla psicologia si basa sull'ascolto profondo, 
+                {isFemale ? "Benvenuta/o" : "Benvenuto"}, sono {prefix} {lastName}. Il mio approccio alla Fisioterapia si basa sull'ascolto profondo, 
                 sull'empatia e sulla costruzione di un'alleanza terapeutica solida per affrontare insieme 
                 le sfide della vita.
               </p>
