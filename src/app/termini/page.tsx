@@ -18,13 +18,13 @@ export default async function TerminiPage({
         
         <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">1. Premessa</h2>
         <p>
-          I presenti Termini di Servizio regolano l'utilizzo del sito web e dei servizi psicologici offerti da {params.name}. 
+          I presenti Termini di Servizio regolano l'utilizzo del sito web e dei servizi di fisioterapia offerti da {params.name}. 
           Navigando sul sito o prenotando un appuntamento per l'ambito di {params.fieldDisplay.toLowerCase()}, l'utente accetta implicitamente le seguenti condizioni.
         </p>
 
         <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">2. Servizi Offerti</h2>
         <p>
-          {params.prefix} si impegna a fornire prestazioni di consulenza e supporto psicologico nel pieno rispetto del Codice Deontologico degli Psicologi Italiani.
+          {params.prefix} si impegna a fornire prestazioni di consulenza e supporto fisioterapico nel pieno rispetto delle normative sanitarie e del Codice Deontologico.
           Le consulenze possono avvenire sia online che in presenza presso lo studio di {params.city}, situato in {params.address}.
         </p>
 
@@ -35,7 +35,7 @@ export default async function TerminiPage({
 
         <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">4. Segreto Professionale</h2>
         <p>
-          Tutte le informazioni condivise durante le sedute sono coperte da rigoroso segreto professionale, come stabilito dall'Art. 11 del Codice Deontologico, salvo i limitati casi di deroga previsti dalla legge italiana.
+          Tutte le informazioni cliniche e personali condivise durante le sedute sono coperte da rigoroso segreto professionale, come stabilito dalle normative sanitarie vigenti, salvo i limitati casi di deroga previsti dalla legge italiana.
         </p>
       </div>
     </div>
