@@ -11,9 +11,7 @@ export default async function ChiSonoPage({
 }) {
   const params = await getDemoParams(searchParams);
   
-  const imageUrl = params.isFemale 
-    ? "/Assets/psychologist-portrait-f.webp"
-    : "/Assets/psychologist-portrait-m.webp";
+  const imageUrl = "/Assets/fisioterapista-portrait.webp";
 
   return (
     <div className="py-24 bg-background min-h-[calc(100vh-140px)]">
@@ -25,7 +23,7 @@ export default async function ChiSonoPage({
           <div className="w-full md:w-1/3 relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl shrink-0">
             <Image
               src={imageUrl}
-              alt={`Ritratto di ${params.name}`}
+              alt={`Ritratto del Fisioterapista ${params.name}`}
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 33vw"
