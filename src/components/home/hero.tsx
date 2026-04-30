@@ -5,7 +5,7 @@ import { SmartLink } from "@/components/smart-link";
 import { Video, Mic, MicOff } from "lucide-react";
 export function HeroSection({ field }: { field: string }) {
   return (
-    <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-background">
+    <section className="relative pt-24 pb-16 lg:pt-40 lg:pb-32 overflow-hidden bg-background">
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
@@ -13,7 +13,7 @@ export function HeroSection({ field }: { field: string }) {
             <span className="inline-block py-1.5 px-4 rounded-full bg-secondary text-primary text-sm font-semibold mb-6 tracking-wide uppercase border border-primary/10">
               Fisioterapista
             </span>
-            <h1 className="text-foreground font-heading text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-6">
+            <h1 className="text-foreground font-heading text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-6">
               Prima ascolto la persona, poi il paziente.
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 max-w-lg">

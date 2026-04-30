@@ -6,19 +6,19 @@ import { SmartLink } from "@/components/smart-link";
 
 export function Footer() {
   return (
-    <footer className="bg-[#0F172A] text-white pt-24 pb-12 overflow-hidden relative">
+    <footer className="bg-[#0F172A] text-white pt-16 pb-8 overflow-hidden relative">
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center mb-32 relative">
+        <div className="text-center mb-20 relative">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 max-w-4xl mx-auto leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-6 max-w-4xl mx-auto leading-tight">
               Inizia oggi il tuo percorso verso il benessere
             </h2>
             <p className="text-white/60 mb-10 max-w-2xl mx-auto">

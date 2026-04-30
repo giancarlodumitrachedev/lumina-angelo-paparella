@@ -9,11 +9,11 @@ const faqs = [
 export function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   return (
-    <section className="py-24 bg-background">
+    <section className="py-16 md:py-24 bg-background">
       <div className="max-w-4xl mx-auto px-6">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-16">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-10 md:mb-16">
           <span className="text-primary/80 font-semibold tracking-wider uppercase text-sm mb-4 block">Domande Frequenti</span>
-          <h2 className="text-secondary-foreground font-heading text-4xl md:text-5xl font-semibold mb-6">Hai dei dubbi?</h2>
+          <h2 className="text-secondary-foreground font-heading text-3xl md:text-5xl font-semibold mb-6">Hai dei dubbi?</h2>
           <p className="text-lg text-foreground/80">Le risposte alle domande più comuni sul percorso.</p>
         </motion.div>
         <div className="space-y-4">

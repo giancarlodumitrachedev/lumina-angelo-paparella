@@ -9,12 +9,12 @@ const services = [
 ];
 export function ServicesSection() {
   return (
-    <section className="py-24 bg-secondary/5">
+    <section className="py-16 md:py-24 bg-secondary/5">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-10 md:mb-16 gap-6">
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="max-w-2xl">
             <span className="text-primary/80 font-semibold tracking-wider uppercase text-sm mb-4 block">Metodologia</span>
-            <h2 className="text-secondary-foreground font-heading text-4xl md:text-5xl font-semibold">Come posso aiutarti</h2>
+            <h2 className="text-secondary-foreground font-heading text-3xl md:text-5xl font-semibold">Come posso aiutarti</h2>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
             <SmartLink href="/servizi" className="group inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors">Scopri tutti i servizi<ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" /></SmartLink>
