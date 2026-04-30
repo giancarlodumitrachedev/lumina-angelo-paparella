@@ -27,7 +27,7 @@ export function HeroSection({ field }: { field: string }) {
             <div className="relative aspect-[4/5] md:aspect-square w-full rounded-[2rem] overflow-hidden shadow-2xl">
               <Image src="/Assets/hero-bg.webp" alt="Studio" fill className="object-cover" priority sizes="(max-width: 768px) 100vw, 50vw" />
             </div>
-            <motion.div initial={{ opacity: 0, x: -50, y: 50 }} animate={{ opacity: 1, x: 0, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }} className="absolute -bottom-10 -left-10 md:-left-20 bg-card p-4 rounded-2xl shadow-xl border border-border/50 flex flex-col gap-3 w-64 z-20">
+            <motion.div initial={{ opacity: 0, x: -50, y: 50 }} animate={{ opacity: 1, x: 0, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }} className="absolute -bottom-6 left-2 sm:-left-6 md:-left-12 lg:-left-20 bg-card p-4 rounded-2xl shadow-xl border border-border/50 flex flex-col gap-3 w-56 sm:w-64 z-20">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full overflow-hidden relative bg-muted shrink-0">
                   <Image src="/Assets/psychologist-portrait-m.webp" alt="Professionista" fill className="object-cover" />
@@ -42,7 +42,7 @@ export function HeroSection({ field }: { field: string }) {
                 <div className="h-8 flex-1 bg-destructive/10 rounded-lg flex items-center justify-center text-destructive"><MicOff className="w-4 h-4" /></div>
               </div>
             </motion.div>
-            <motion.div initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.8 }} className="absolute top-10 -right-6 md:-right-12 bg-card px-5 py-3 rounded-xl shadow-lg border border-border/50 flex items-center gap-3 z-20">
+            <motion.div initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.8 }} className="absolute top-6 right-2 sm:-right-4 md:-right-8 lg:-right-12 bg-card px-4 sm:px-5 py-3 rounded-xl shadow-lg border border-border/50 flex items-center gap-2 sm:gap-3 z-20">
               <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
               <span className="text-sm font-medium">Paziente in Sessione</span>
             </motion.div>
