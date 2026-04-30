@@ -1,10 +1,7 @@
 import { HeroSection } from "@/components/home/hero";
-import { AboutSection } from "@/components/home/about";
 import { IssuesGrid } from "@/components/home/issues";
 import { ServicesSection } from "@/components/home/services";
 import { ReviewsSection } from "@/components/home/reviews";
-import { StudioSection } from "@/components/home/studio";
-import { LocationSection } from "@/components/home/location";
 import { FaqSection } from "@/components/home/faq";
 import { getDemoParams } from "@/lib/demo-params";
 
@@ -18,20 +15,9 @@ export default async function HomePage(props: Props) {
   return (
     <div className="flex flex-col w-full h-full">
       <HeroSection field={params.fieldDisplay} />
-      
-      {/* Sezione About spostata in alto come da design psicologi */}
-      <AboutSection 
-        name={params.name} 
-        fieldDisplay={params.fieldDisplay} 
-        isFemale={params.isFemale} 
-        prefix={params.prefix}
-      />
-      
       <IssuesGrid />
       <ServicesSection />
       <ReviewsSection />
-      <StudioSection />
-      <LocationSection city={params.city} address={params.address} />
       <FaqSection />
     </div>
   );
